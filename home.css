@@ -1,0 +1,128 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:brown;
+    padding: 30px 30px;
+    width: 135vw;
+  }
+  
+  *{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  .menu a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20pt;
+    position: absolute;
+    top: 0px;
+    left:200px;
+    display: inline-block; 
+    position:relative;
+    
+    border-right:0px solid #c0c0c0;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    
+}
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+    color: aliceblue;
+    padding: 0 1 rem;
+  }
+
+  .nav ul{
+    display: flex;
+    list-style-type: none;
+  }
+
+  .nav ul li{
+    margin: 0 10px;
+    padding: 0 70px;
+  }
+
+  .nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 30px;
+    transition: all ease .4s;
+  }
+
+  .nav ul li a:hover{
+    color: rgb(228, 88, 63);
+  }
+
+  .campos{
+        width: 135vw;
+  }
+
+  .nomes{
+    font-size: 25px;
+    margin-top:70px;
+    margin-left: 40px;
+    display: flex;
+  }
+
+  .nomes1{
+    margin-left: 400px;
+    margin-right:100px;
+  }
+
+  .imagens{
+    margin-left: 20px;
+  }
+
+  .imagens img{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .sobre{
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    display: flex;
+  }
+  .sobre ul {
+    display: block;
+    list-style-type: disc;
+    padding-inline-start: 50px;
+    unicode-bidi: isolate;
+    width: 200px;
+    margin-right: 490px;
+  }
+  .sobre2{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+  }
+  .sobre2 p{
+    width: 760px;
+    text-align: center;
+  }
+  .botao{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .botao2{
+    width: 760px;
+    text-align: center;
+  }
+  .botao3{
+    background-color: darkred;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    width: 100px;
+    height: 40px;
+  }
+  

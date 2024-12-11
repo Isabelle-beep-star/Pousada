@@ -1,0 +1,126 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:brown;
+    padding: 10px 30px;
+    width: 135vw;
+    position: fixed;
+    top: 0%;
+    z-index: 9;
+  height: auto;
+
+  }
+  
+  *{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+.menu a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 20pt;
+  position: absolute;
+  top: 0px;
+  left:200px;
+  display: inline-block; 
+  position:relative;
+  
+  border-right:0px solid #c0c0c0;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+    color: aliceblue;
+    padding: 0 1 rem;
+  }
+
+  .nav ul{
+    display: flex;
+    list-style-type: none;
+    padding: 1rem;
+   
+  }
+
+  .nav ul li{
+    margin: 0 10px;
+    padding: 0 70px;
+    
+  }
+
+  .nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 30px;
+    transition: all ease .4s;
+  }
+
+  .nav ul li a:hover{
+    color: rgb(228, 88, 63);
+  }
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-image: url(WhatsApp\ Image\ 2024-09-23\ at\ 10.59.59.jpeg);
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-overflow: ellipsis;
+  }
+
+  .button input {
+    background-color: #a01604;
+    color: rgba(255, 255, 255, 0.986);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    font-family:'Times New Roman';
+    font-size: medium;
+    display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.button input:hover {
+    background-color: #7e0f00;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex; 
+    align-items:center;
+      position:absolute;
+      top: 50%;
+      left: 50%;
+       transform: translate(-50%, -50%);
+      }
+
+input[type="text"]{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

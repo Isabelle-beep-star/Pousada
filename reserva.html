@@ -1,0 +1,152 @@
+<?php
+
+if (isset($_POST['submit'])) {
+    include_once('conexao.php');
+
+    // Recebendo os dados do formulário
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $cpf = $_POST['cpf'];
+    $telefone = $_POST['telefone'];
+    $acomodacao = $_POST['acomodacao'];
+    $pergunta = $_POST['pergunta'];
+
+    // Verificando se a data foi recebida
+    if (isset($_POST['data']) && !empty($_POST['data'])) {
+        $data = DateTime::createFromFormat('d de F de Y', $_POST['data']);
+        $dataFormatada = $data->format('Y-m-d');  // Convertendo para o formato 'YYYY-MM-DD'
+    } else {
+        $dataFormatada = null; // Se não houver data, pode definir null
+    }
+
+    // Realizando a inserção no banco de dados
+    $result = mysqli_query($conexao, "INSERT INTO reservas (nome, email, cpf, telefone, acomodacao, pergunta, data)
+    VALUES ('$nome', '$email', '$cpf', '$telefone', '$acomodacao', '$pergunta', '$dataFormatada')");
+
+    if ($result) {
+        echo "Reserva realizada com sucesso!";
+    } else {
+        echo "Erro ao realizar a reserva.";
+    }
+}
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link href="reservas.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header> 
+        <div class="nav">
+            <div class="logo">
+                <img src="logo-pousada-quinta-do-ypua.webp" width="140" height="90">
+            </div>
+
+            <div class="menu">
+                <ul>
+                 <li><a href='reserva.html'>Reservar</a></li>
+                 <li> <a href='home.html'>Acomodações</a></li>
+                 <li><a href='cadastro.html'>Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        div.container{
+            text-align: center;
+        }
+    </style>
+    <div class="container">
+    <form action="reserva.php" method="post" class="form-container">
+        <h1>Reservar</h1>
+        <br>
+
+        <div class="campo">
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" size="60" name="nome" id="nome" placeholder="Insira o nome completo do cliente">
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="text" size="60" name="email" id="email" placeholder="Insira o E-mail do cliente">
+            </div>
+        </div>
+
+        <div class="campo">
+            <div class="campo">
+                <label for="cpf">CPF:</label>
+                <input type="text" size="60" name="cpf" id="cpf" placeholder="Insira o CPF do cliente">
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone:</label>
+                <input type="text" size="60" name="telefone" id="telefone" placeholder="Insira o telefone do cliente">
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="acomodacao">Acomodação escolhida:</label>
+            <input type="text" size="60" name="acomodacao" id="acomodacao" placeholder="Insira a acomodação do cliente">
+        </div>
+
+        <div class="campo">
+            <label for="pergunta">Pedidos especiais:</label>
+            <textarea placeholder="Digite o pedido do cliente" rows="3" cols="25" name="pergunta"></textarea>
+        </div><br>
+
+        <input type="hidden" name="data" id="data">
+
+        <div class="button">
+            <input type="submit" name="submit" value="Concluir">
+        </div>
+    
+        </form> 
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-year" name="data">&lt;&lt;</button>
+            <button id="prev-month" name="data">&lt;</button>
+            <span id="month-year" name="data"></span>
+            <button id="next-month" name="data">&gt;</button>
+            <button id="next-year" name="data">&gt;&gt;</button>
+        </div>
+        <table id="calendar" class="calendar">
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="selected-date"></div>
+    </div>
+</div>
+
+<script src="calendario.js"></script>
+
+    <div class="button">
+<input type="submit" name="submit" value="Concluir">
+</div>
+    </div>
+
+
+    </form>
+
+</body>
+</html>

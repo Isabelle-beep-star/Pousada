@@ -1,0 +1,227 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:brown;
+  padding: 10px 10px;
+  width: 140vw;
+  position: fixed;
+  top: 0%;
+  z-index: 9;
+  height: auto;
+
+}
+
+*{
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo{
+  position: relative;
+  z-index: 10;
+ margin-right: 20px;
+}
+
+.menu a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-size: 20pt;
+position: absolute;
+top: 0px;
+left:200px;
+display: inline-block; 
+position:relative;
+
+border-right:0px solid #c0c0c0;
+justify-content: center;
+align-items: center;
+font-family: monospace;
+
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: brown;
+  color: aliceblue;
+  padding: 0 1 rem;
+}
+
+.nav ul{
+  display: flex;
+  list-style-type: none;
+  padding: 1rem;
+ 
+}
+
+.nav ul li{
+  margin: 0 10px;
+  padding: 0 70px;
+  
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 30px;
+  transition: all ease .4s;
+}
+
+.nav ul li a:hover{
+  color: rgb(228, 88, 63);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-image: url(reserva.jpeg);
+    
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-overflow: ellipsis;
+  }
+
+  .button input{
+    background-color: #a01604;
+    color: rgba(255, 255, 255, 0.986);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    font-family:'Times New Roman';
+    font-size: medium;
+    display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.button input:hover {
+    background-color: #7e0f00;
+}
+
+.container {
+  background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex; 
+    align-items:center;
+      position:absolute;
+      top: 50%;
+      left: 35%;
+       transform: translate(-50%, -50%);
+       max-width: 700px;
+       margin: 80px auto;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       margin-top: 100px;
+       margin-left:200px;
+}
+
+input[type="text"]{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.calendar-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-container button {
+  background-color: #7e0f00;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.calendar-container button:hover {
+  background-color: #c02626;
+}
+
+#month-year {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  width: 14.28%;
+  padding: 5px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+td {
+  width: 14.28%;
+  height: 40px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+td:hover {
+  background-color: #e1e1e1;
+}
+
+.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#selected-date {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.selected-range {
+  background-color: #A5D6A7;
+  color: white;
+}
